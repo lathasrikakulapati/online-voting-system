@@ -1,0 +1,15 @@
+<!-- vote.html -->
+<form method="POST">
+    {% csrf_token %}
+    <label for="election_id">Select Election:</label>
+    <select name="election_id">
+        {% for election in elections %}
+            <option value="{{ election.id }}">{{ election.name }}</option>
+        {% endfor %}
+    </select><br>
+
+    <label for="choice">Your Vote:</label>
+    <input type="text" name="choice" required><br>
+
+    <button type="submit">Vote</button>
+</form>
