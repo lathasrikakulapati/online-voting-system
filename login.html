@@ -1,0 +1,15 @@
+<!-- login.html -->
+<form method="POST" id="login-form">
+    {% csrf_token %}
+    <label for="username">Username</label>
+    <input type="text" name="username" required><br>
+
+    <button type="submit">Login</button>
+</form>
+
+<video id="video" width="640" height="480" autoplay></video>
+<button onclick="captureAndAuthenticate()">Capture and Authenticate</button>
+
+<script>
+    // JavaScript to capture webcam feed and send to server for face recognition.
+</script>
